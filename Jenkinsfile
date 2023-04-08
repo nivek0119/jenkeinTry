@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo 'stage3-pylint'
                 // sh "sudo pylint /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                
             }
         }
 
