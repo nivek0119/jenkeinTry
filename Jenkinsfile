@@ -31,7 +31,7 @@ pipeline {
     post {
         always {
             // emailext attachLog: true, body: '', subject: 'build status', to: 'kevin.chotaliya@colorado.edu'
-            emailext attachLog: true, body: '$PROJECT_NAME - $BUILD_NUMBER - $ BUILD_STATUS', subject: 'build status', to: 'kevin.chotaliya@colorado.edu'
+            emailext attachLog: true, body: ' Your $PROJECT_NAME with Build Number $BUILD_NUMBER is $BUILD_STATUS', subject: 'Your New Build Status', to: 'kevin.chotaliya@colorado.edu'
             // emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
