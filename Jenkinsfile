@@ -15,9 +15,15 @@ pipeline {
                sh 'sudo pip install prettytable'
             }
         }
-        stage('Deploy') { 
+        stage('Pylint') { 
             steps {
-                echo "pylint /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                sh "pylint /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+            }
+        }
+
+        stage('Running python Code') { 
+            steps {
+                sh "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }
     }
