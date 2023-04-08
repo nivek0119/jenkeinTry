@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Test') { 
             steps {
-               pip install 
+               sh 'pip install ncclient'
             }
         }
         stage('Deploy') { 
