@@ -8,7 +8,11 @@ pipeline {
         }
         stage('Test') { 
             steps {
-               sh 'pip install ncclient'
+               sh 'sudo pip install ncclient'
+               sh 'sudo pip install pandas'
+               sh 'sudo pip install ipaddress'
+               sh 'sudo pip install netaddr'
+               sh 'sudo pip install prettytable'
             }
         }
         stage('Deploy') { 
