@@ -1,0 +1,31 @@
+
+username kevin privilege 15 password 0 kevin
+!
+ip domain-name do.name
+!
+
+ip ssh version 2
+! 
+!
+!
+
+!
+!
+line con 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line aux 0
+ exec-timeout 0 0
+ privilege level 15
+ logging synchronous
+ stopbits 1
+line vty 0 4
+ login local
+ transport input ssh
+!
+netconf ssh acl 1
+!
+crypto key generate rsa
+1024
