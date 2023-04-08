@@ -17,13 +17,14 @@ pipeline {
         }
         stage('Pylint') { 
             steps {
-                sh "whoami"
+                sh "su kevin && whoami"
+                // sh "whoami"
             }
         }
 
         stage('Running python Code') { 
             steps {
-                sh "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                echo "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }
     }
