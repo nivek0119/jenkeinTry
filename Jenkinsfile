@@ -25,6 +25,7 @@ pipeline {
         }
         stage('Stage_4 - Unit Testing') { 
             steps {
+                
                 echo "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }
