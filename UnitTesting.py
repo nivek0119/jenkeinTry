@@ -57,6 +57,7 @@ class TestGetAreaRectangle(unittest.TestCase):
         rectangle = Rectangle(2, 3)
         # self.assertEqual(rectangle.get_area(), 6, "incorrect area")
         self.assertEqual(netman.checkr3ip(),True,"Incorrect loopbackIP")
+        
  
 # run the test
 unittest.main()
