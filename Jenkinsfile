@@ -1,7 +1,6 @@
 pipeline {
     agent any 
-    stages {}
-        }
+    stages {
         stage('Stage_1 - Install packages') { 
             steps {
                sh 'sudo pip install ncclient'
@@ -30,6 +29,7 @@ pipeline {
             }
         }
     
+    }
     post {
         always {
             // emailext attachLog: true, body: '', subject: 'build status', to: 'kevin.chotaliya@colorado.edu'
