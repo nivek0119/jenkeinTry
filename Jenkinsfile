@@ -19,7 +19,7 @@ pipeline {
 
         stage('Stage_3 - Running the application') { 
             steps {
-                echo "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                sh "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }
         stage('Stage_4 - Unit Testing') { 
