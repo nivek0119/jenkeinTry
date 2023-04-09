@@ -24,17 +24,14 @@ pipeline {
         }
         stage('Stage_4 - Unit Testing') { 
             steps {
-
-                echo "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                sh "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/UnitTesting.py.py"
             }
         }
     
     }
     post {
-        always {
-            // emailext attachLog: true, body: '', subject: 'build status', to: 'kevin.chotaliya@colorado.edu'
+        always {   
             emailext attachLog: true, body: ' Your project named "$PROJECT_NAME" with Build Number "$BUILD_NUMBER" is "$BUILD_STATUS" \nTo see more, open below attached Log File', subject: 'Your New Build is $BUILD_STATUS', to: 'kevin.chotaliya@colorado.edu'
-            // emailext body: 'A Test EMail', recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']], subject: 'Test'
         }
     }
 }
