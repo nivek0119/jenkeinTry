@@ -20,6 +20,7 @@ pipeline {
         stage('Stage_3 - Running the application') { 
             steps {
                 sh "sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
+                sh 'sleep 90'
             }
         }
         stage('Stage_4 - Unit Testing') { 
