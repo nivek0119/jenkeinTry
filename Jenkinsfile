@@ -12,7 +12,7 @@ pipeline {
         }
         stage('Stage_2 - Checking and Fixing Violations') { 
             steps {
-                echo 'stage3-pylint'
+                sh 'sudo python3 /home/kevin/Desktop/Lab9_Jenkins_Desktop/stage2.py'
                 // sh "sudo pylint /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }

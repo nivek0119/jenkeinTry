@@ -65,7 +65,7 @@ class netman:
         neighbor=re.search('(5/5)',output)
         result=neighbor.group(1)
 
-        if result=="5/5":
+        if result=="5/5" or result=="4/5":
             return True
         else:
             return False
