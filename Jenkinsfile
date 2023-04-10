@@ -16,6 +16,7 @@ pipeline {
                 // sh "sudo pylint /home/kevin/Desktop/Lab9_Jenkins_Desktop/netman_netconf_obj2.py"
             }
         }
+        
 
         stage('Stage_3 - Running the application') { 
             steps {
