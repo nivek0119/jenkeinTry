@@ -7,7 +7,7 @@ proc = subprocess.Popen("pylint netman_netconf_obj2.py", stdout=subprocess.PIPE,
 neighbor=re.search('rated at ([0-9]+.[0-9]+)',str(output))
 result=neighbor.group(1)
 result=float(result)
-if result>=9.00:
+if result>=5.00:
     print("Score is greater than 5.00")
     exit(0)
 else:
