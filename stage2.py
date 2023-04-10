@@ -19,6 +19,8 @@ print(type(result))
 result=float(result)
 print(type(result))
 if result>=5.00:
-    print("greater")
+    # print("greater")
+    exit(0)
 else:
-    print("smaller")
+    # print("smaller")
+    exit(1)
